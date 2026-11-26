@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08070b">
+  <meta name="description" content="A little birthday surprise made especially for Bhoomi.">
+  <title>For Bhoomi ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+
+  <main>
+    <section class="screen hero active" id="welcome">
+      <div class="eyebrow"><span></span> A LITTLE SOMETHING JUST FOR YOU <span></span></div>
+      <div class="orbit"><div class="orbit-dot"></div><div class="orbit-dot second"></div></div>
+      <div class="hero-frame" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>✧</span></div>
+      <p class="hero-kicker">A day made a little more magical</p>
+      <h1 class="hero-name"><em>Bhoomi</em><span class="gold-dot">✦</span></h1>
+      <p class="hero-copy">For a spirited soul who turns every road into an adventure.<br>Today, the spotlight is all yours.</p>
+      <button class="gold-button" id="beginBtn">Step into your surprise <span>✦</span></button>
+      <div class="scroll-hint">MADE WITH WARM WISHES <span>✧</span></div>
+    </section>
+
+    <section class="screen celebration" id="birthday">
+      <div class="eyebrow"><span></span> TODAY IS YOURS <span></span></div>
+      <p class="script-line">A little sparkle for a wonderful friend</p>
+      <h2 class="birthday-heading">Happy Birthday</h2>
+      <div class="name-line">BHOOMI</div>
+      <p class="section-copy">May the year ahead bring you beautiful surprises,<br>big smiles and countless reasons to shine.</p>
+      <button class="outline-button" data-next="memories">Take a walk through memories <span>→</span></button>
+      <div class="celebration-sparkle">✧</div>
+    </section>
+
+    <section class="screen memories" id="memories">
+      <div class="section-top">
+        <div class="eyebrow"><span></span> LITTLE MOMENTS, LOVELY MEMORIES <span></span></div>
+        <h2>Moments worth <em>keeping.</em></h2>
+        <p class="section-copy">A few snapshots, each with its own little story.</p>
+      </div>
+      <div class="memory-hanging" aria-label="Hanging photo memories">
+        <div class="photo-thread"><span></span></div>
+        <button class="slide-arrow prev" id="memoryPrev" aria-label="Previous photo">‹</button>
+        <div class="hanging-window" id="hangingWindow">
+          <div class="hanging-track" id="hangingTrack">
+            <article class="hanging-photo"><div class="clip"></div><img src="images/photo1.jpg" alt="Bhoomi outdoors in a garden"><p>01 · Golden afternoon</p></article>
+            <article class="hanging-photo"><div class="clip"></div><img src="images/photo2.jpg" alt="Bhoomi enjoying a waterfall"><p>02 · Into the green</p></article>
+            <article class="hanging-photo"><div class="clip"></div><img src="images/photo3.jpg" alt="Bhoomi in a festive outfit"><p>03 · A graceful moment</p></article>
+            <article class="hanging-photo"><div class="clip"></div><img src="images/photo4.jpg" alt="Bhoomi under evening lights"><p>04 · Under the lights</p></article>
+            <article class="hanging-photo"><div class="clip"></div><img src="images/photo5.jpg" alt="Bhoomi enjoying a misty hill view"><p>05 · Chasing the clouds</p></article>
+            <article class="hanging-photo"><div class="clip"></div><img src="images/photo6.jpg" alt="Bhoomi in a traditional outfit"><p>06 · Simply lovely</p></article>
+            <article class="hanging-photo"><div class="clip"></div><img src="images/photo7.jpg" alt="Bhoomi smiling in a purple saree"><p>07 · A moment to remember</p></article>
+          </div>
+        </div>
+        <button class="slide-arrow next" id="memoryNext" aria-label="Next photo">›</button>
+        <div class="memory-controls"><span id="memoryCount">01 / 07</span><div class="memory-dots" id="memoryDots" aria-label="Choose a memory"></div><span class="swipe-hint">SWIPE OR TAP ARROWS</span></div>
+      </div>
+      <div class="funny-intro">
+        <div class="eyebrow"><span></span> THE UNFILTERED BLOOPERS <span></span></div>
+        <h2>Warning: <em>giggles ahead.</em> 😂</h2>
+        <p class="section-copy">A tiny mystery box contains two very serious pieces of evidence… or maybe not.</p>
+      </div>
+      <div class="surprise-wrap">
+        <button class="surprise-box" id="funnyBox" aria-expanded="false" aria-controls="funnyReveal">
+          <span class="box-sparkle">✦</span><span class="box-lid"></span><span class="box-body">🎁</span><span class="box-ribbon"></span>
+          <strong>DO NOT OPEN…</strong><small>(okay, definitely open it)</small>
+        </button>
+        <div class="funny-reveal" id="funnyReveal" hidden>
+          <div class="reveal-heading">SURPRISE UNLOCKED <span>😂</span></div>
+          <div class="funny-gallery">
+            <article class="funny-polaroid funny-one"><b class="comic-sticker sticker-wow">WOW 😂</b><img src="images/photo8.jpg" alt="Bhoomi making a funny playful expression"><p>Exhibit A: Zero explanation needed.</p></article>
+            <article class="funny-polaroid funny-two"><b class="comic-sticker sticker-mood">MOOD!</b><img src="images/photo9.jpg" alt="Bhoomi making another funny playful expression"><p>Exhibit B: A certified classic.</p></article>
+          </div>
+          <p class="funny-footnote">Officially too iconic for the college notice board. 🤭</p>
+        </div>
+      </div>
+      <button class="gold-button" data-next="letter">A message for you <span>✦</span></button>
+    </section>
+
+    <section class="screen letter-section" id="letter">
+      <div class="letter-card">
+        <div class="letter-star">✧</div>
+        <div class="eyebrow">A NOTE FROM THE HEART</div>
+        <h2>Dear <em>Bhoomi,</em></h2>
+        <p>Happy birthday, Bhoomi! From those college days when you were my junior to now, it is lovely to see you keep bringing your own spark wherever you go.</p>
+        <p>May your adventurous heart always find new trails, beautiful places, unexpected stories and the courage to say “let’s go!” to the next great experience.</p>
+        <p>Keep exploring, keep laughing, and keep being wonderfully you. A birthday wish from your senior — and a friend — for a year full of good surprises.</p>
+        <div class="letter-signoff">Your senior &amp; friend <span>✦</span></div>
+      </div>
+      <button class="outline-button" data-next="gift">There’s one last thing… <span>→</span></button>
+    </section>
+
+    <section class="screen gift-section" id="gift">
+      <div class="eyebrow"><span></span> YOUR NEXT CHAPTER BEGINS HERE <span></span></div>
+      <h2>The world is <em>waiting.</em></h2>
+      <p class="section-copy final-intro">One last little thing for the girl whose curiosity has no map<br>and whose next adventure is always just around the corner.</p>
+
+      <div class="adventure-orbit" aria-hidden="true">
+        <div class="orbit-ring ring-one"></div><div class="orbit-ring ring-two"></div>
+        <div class="orbit-ring ring-three"></div>
+        <span class="orbit-star star-a">✦</span><span class="orbit-star star-b">✧</span><span class="orbit-star star-c">✦</span>
+        <div class="compass-core"><span class="compass-n">N</span><span class="compass-needle">✧</span><span class="compass-label">ADVENTURE<br>AWAITS</span></div>
+      </div>
+      <button class="adventure-button" id="giftButton"><span>✦</span> UNLOCK YOUR NEXT ADVENTURE <span>✦</span></button>
+
+      <div class="adventure-pass" id="adventurePass" hidden aria-live="polite">
+        <div class="pass-topline"><span>THE ADVENTURE CLUB</span><span>NO. 001 · BHOOMI</span></div>
+        <div class="pass-main">
+          <div class="pass-stamp">GO<br>EXPLORE</div>
+          <div class="pass-copy">
+            <p class="pass-kicker">A BIRTHDAY PASS TO EVERYWHERE</p>
+            <h3>Dear <em>Bhoomi,</em></h3>
+            <p class="pass-message">May your life be filled with roads worth taking, mountains worth climbing, stories worth telling and spontaneous “let’s go!” moments.</p>
+            <p class="pass-destination">DESTINATION <strong>WHEREVER YOUR HEART LEADS</strong></p>
+            <p class="pass-class">TRAVEL CLASS <strong>FEARLESS &amp; FREE</strong></p>
+          </div>
+        </div>
+        <div class="pass-bottom"><span>VALID FOR A LIFETIME</span><span>HAPPY BIRTHDAY ✦</span></div>
+      </div>
+      <p class="final-signoff" id="giftMessage">Keep collecting moments, not maps. Happy Birthday, Bhoomi! ✨</p>
+      <button class="text-button" id="replayBtn">↻ Take me back to the beginning</button>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo preview">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close photo">×</button>
+    <img id="lightboxImage" src="" alt="Memory enlarged">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
